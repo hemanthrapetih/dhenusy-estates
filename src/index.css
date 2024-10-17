@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "flux_regular";
+  src: url("../src/assets/font/AfacadFlux-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "flux_bold";
+  src: url("../src/assets/font/AfacadFlux-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "flux_black";
+  src: url("../src/assets/font/AfacadFlux-Black.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "flux_regular", sans-serif;
+  background: #151414;
+  opacity: 1;
+  /* background-image: radial-gradient(#000000 0.65px, transparent 0.65px),
+    radial-gradient(#000000 0.65px, #dfdfdf 0.65px); */
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
