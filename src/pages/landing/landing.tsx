@@ -12,7 +12,11 @@ export default function Landing() {
       </div>
       <div className={styles.videoBgTint}></div>
       <video className={styles.videoBg} autoPlay muted loop>
-        <source src="src\assets\bgvideo.mp4" type="video/mp4" />
+        <source
+          src={`${import.meta.env.VITE_PUBLIC_URL}bgvideo.mp4`}
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
       </video>
       {/* <section className={styles.ourprojects}>
         <img
