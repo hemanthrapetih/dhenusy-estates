@@ -374,7 +374,7 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Green Villas</h1>
+                <h1 className={`${styles.projectTitle} m-1  `}>Apartments</h1>
                 <h2 className={styles.projectSubTitle}>
                   Sheela Nagar, Visakhapatnam
                 </h2>
@@ -423,9 +423,9 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Green Villas</h1>
+                <h1 className={`${styles.projectTitle} m-1  `}>Farm House</h1>
                 <h2 className={styles.projectSubTitle}>
-                  Sheela Nagar, Visakhapatnam
+                  Kothavalasa, vizianagaram
                 </h2>
                 <h2 className={styles.projectSubTitle}>
                   20 Acres Gated comunity
@@ -472,10 +472,10 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Green Villas</h1>
-                <h2 className={styles.projectSubTitle}>
-                  Sheela Nagar, Visakhapatnam
-                </h2>
+                <h1 className={`${styles.projectTitle} m-1  `}>
+                  Farm villas & Resorts
+                </h1>
+                <h2 className={styles.projectSubTitle}>Narshipatnam</h2>
                 <h2 className={styles.projectSubTitle}>
                   20 Acres Gated comunity
                 </h2>
@@ -521,10 +521,8 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Green Villas</h1>
-                <h2 className={styles.projectSubTitle}>
-                  Sheela Nagar, Visakhapatnam
-                </h2>
+                <h1 className={`${styles.projectTitle} m-1  `}>Agri Farming</h1>
+                <h2 className={styles.projectSubTitle}>Orissa</h2>
                 <h2 className={styles.projectSubTitle}>
                   20 Acres Gated comunity
                 </h2>
