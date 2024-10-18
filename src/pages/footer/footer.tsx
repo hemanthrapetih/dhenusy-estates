@@ -4,14 +4,15 @@ export default function Footer() {
   return (
     <>
       <section className={Styles.footerContainer}>
-        <div className="flex justify-between flex-wrap">
-          <span className="text-5xl font-bold">DHENUSYA ESTATES</span>
-          <div className="w-1/4">
+        <span className="text-4xl font-bold">DHENUSYA ESTATES</span>
+        <div className={Styles.divider}></div>
+        <div className="flex justify-between flex-wrap pt-6 ">
+          <div className="">
             <span className={Styles.title}>Contact</span>
+
             <p className={Styles.Subtitle}>
-              47-15-7/46, 4 th Floor, Pavan Palace, Elios Technologies Inc,
-              beside V Square, opp. TSR Complex, Dwaraka Nagar, Visakhapatnam,
-              Andhra Pradesh 530016
+              Dhenusya Infotech, 4th Floor, Pavan Palace,
+              <p className="">beside V Square, Dwaraka Nagar, Visakhapatnam</p>
             </p>
             <p className={Styles.Subtitle}>Dhenusya@gmail.com</p>
             <p className={Styles.Subtitle}>+91 978968736872</p>

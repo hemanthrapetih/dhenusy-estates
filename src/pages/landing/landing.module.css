@@ -70,9 +70,11 @@
   font-size: 6rem;
   font-weight: 600;
   line-height: 6rem;
-  margin-top: 8rem;
+  margin-top: 4rem;
+  color: white;
 }
 .projectSubTitle {
+  color: white;
   font-size: 2.5rem;
 }
 .verticalLine {
@@ -86,6 +88,35 @@
   justify-content: center;
   /* width: 70%; */
   width: -webkit-fill-available;
+  /* width: inherit; */
+  align-items: center;
+  height: 100vh;
+}
+/* ************************** */
+.viewProjectWrapperMobile {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* width: 70%; */
+  width: -webkit-fill-available;
+  /* width: inherit; */
+  align-items: center;
+  height: 50vh;
+}
+
+.scrollImageMobile {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  cursor: pointer;
+}
+/* *********************** */
+.viewProjectWrapperLeft {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  /* width: -webkit-fill-available; */
   /* width: inherit; */
   align-items: center;
   height: 100vh;
@@ -194,4 +225,91 @@
   object-fit: cover;
   border-radius: 12px;
   height: 100%;
+}
+
+/* ********************************** */
+/* Media Queries for Responsive Design */
+
+/* For screens larger than 1200px */
+@media (min-width: 1200px) {
+  .videoTitle p {
+    font-size: 6rem;
+  }
+  .projectTitle {
+    font-size: 6rem;
+  }
+  .projectSubTitle {
+    font-size: 2.5rem;
+  }
+  .carTitle {
+    font-size: 60px;
+  }
+  .cardparagraph {
+    font-size: 17px;
+  }
+}
+
+/* For tablets and small laptops (768px to 1200px) */
+@media (max-width: 1200px) {
+  .videoTitle p {
+    font-size: 4.5rem;
+  }
+  .projectTitle {
+    font-size: 4rem;
+  }
+  .projectSubTitle {
+    font-size: 2rem;
+  }
+  .carTitle {
+    font-size: 50px;
+  }
+  .cardparagraph {
+    font-size: 16px;
+  }
+}
+
+/* For mobile phones (up to 768px) */
+@media (max-width: 768px) {
+  .videoTitle p {
+    font-size: 3rem;
+  }
+  .projectTitle {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .projectSubTitle {
+    font-size: 1.8rem;
+  }
+  .carTitle {
+    font-size: 40px;
+  }
+  .cardparagraph {
+    font-size: 15px;
+  }
+}
+
+/* For very small mobile phones (up to 480px) */
+@media (max-width: 480px) {
+  .ourDreamsContainer {
+    flex-wrap: wrap;
+  }
+  .trustImagelast {
+    padding-top: 20px;
+  }
+  .videoTitle p {
+    font-size: 2.5rem;
+  }
+  .projectTitle {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .projectSubTitle {
+    font-size: 1.5rem;
+  }
+  .carTitle {
+    font-size: 35px;
+  }
+  .cardparagraph {
+    font-size: 14px;
+  }
 }

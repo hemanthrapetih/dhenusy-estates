@@ -1,9 +1,10 @@
 .footerContainer {
   background: #d4af37;
-  height: 300px;
+  /* height: 300px; */
   width: 100%;
-  padding: 3% 10%;
+  padding: 3% 10% 5% 10%;
   /* display: flex;
+  color
   justify-content: center; */
 }
 .title {
@@ -23,4 +24,11 @@
 
 .Subtitle:hover {
   color: white;
+}
+.divider {
+  margin-top: 10px;
+  height: 1px;
+  width: 100%;
+  color: black;
+  background: black;
 }
