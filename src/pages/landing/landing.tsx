@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { InfiniteMovingCardsDemo } from "../../shared/UI/infinite-scroll/infinite-comp";
 import Footer from "../footer/footer";
 import styles from "./landing.module.css";
+import { useNavigate } from "react-router-dom";
 // Define breakpoints for different screens
 const MOBILE_BREAKPOINT = 440;
 const TABLET_BREAKPOINT = 768;
@@ -10,7 +11,6 @@ const DESKTOP_BREAKPOINT = 1024;
 
 export default function Landing() {
   // *****************************************************
-
   const [screenSize, setScreenSize] = useState<string>(""); // To store the screen size type
 
   const handleResize = () => {
@@ -26,7 +26,6 @@ export default function Landing() {
       setScreenSize("largeDesktop");
     }
   };
-
   // Run once when component mounts and listen for resize events
   useEffect(() => {
     handleResize(); // Set initial screen size
@@ -37,6 +36,14 @@ export default function Landing() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // HANDLE FUNCTIONS
+
+  const navigate = useNavigate();
+  function handleRouting(value: any) {
+    console.log(value);
+    navigate(value);
+  }
   // ********************************************************
 
   return (
@@ -69,7 +76,12 @@ export default function Landing() {
                 <div
                   className={` ${styles.flexDivText} "grow p-8 border-y border-slate-950 bg-[#151414]"`}
                 >
-                  <h1 className={styles.projectTitle}>Green Villas</h1>
+                  <h1
+                    onClick={() => handleRouting("Greenvilla")}
+                    className={styles.projectTitle}
+                  >
+                    Green Villas
+                  </h1>
                   <h2 className={styles.projectSubTitle}>
                     Sheela Nagar, Visakhapatnam
                   </h2>
@@ -94,6 +106,7 @@ export default function Landing() {
                   >
                     <div className={styles.viewProjectWrapper}>
                       <img
+                        onClick={() => handleRouting("Greenvilla")}
                         src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                         loading="lazy"
                         width="100"
@@ -120,6 +133,7 @@ export default function Landing() {
                   <div className={styles.absoluteBlock}>
                     <div className={styles.viewProjectWrapperLeft}>
                       <img
+                        onClick={() => handleRouting("Apartments")}
                         src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                         loading="lazy"
                         width="100"
@@ -139,7 +153,12 @@ export default function Landing() {
                 <div
                   className={` ${styles.flexDivText} "grow p-8 border-y border-slate-950 bg-[#151414]"`}
                 >
-                  <h1 className={styles.projectTitle}>Apartments</h1>
+                  <h1
+                    onClick={() => handleRouting("Apartments")}
+                    className={styles.projectTitle}
+                  >
+                    Apartments
+                  </h1>
                   <h2 className={styles.projectSubTitle}>
                     Sheela Nagar, Visakhapatnam
                   </h2>
@@ -166,7 +185,12 @@ export default function Landing() {
                 <div
                   className={` ${styles.flexDivText} "grow p-8 border-y border-slate-950 bg-[#151414]"`}
                 >
-                  <h1 className={styles.projectTitle}>Farm House</h1>
+                  <h1
+                    onClick={() => handleRouting("FarmHouse")}
+                    className={styles.projectTitle}
+                  >
+                    Farm House
+                  </h1>
                   <h2 className={styles.projectSubTitle}>
                     Kothavalasa, vizianagaram
                   </h2>
@@ -186,6 +210,7 @@ export default function Landing() {
                   <div className={styles.absoluteBlock}>
                     <div className={styles.viewProjectWrapper}>
                       <img
+                        onClick={() => handleRouting("FarmHouse")}
                         src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                         loading="lazy"
                         width="100"
@@ -212,6 +237,7 @@ export default function Landing() {
                   <div className={styles.absoluteBlock}>
                     <div className={styles.viewProjectWrapperLeft}>
                       <img
+                        onClick={() => handleRouting("FarmVillasResorts")}
                         src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                         loading="lazy"
                         width="100"
@@ -231,7 +257,12 @@ export default function Landing() {
                 <div
                   className={` ${styles.flexDivText} "grow p-8 border-y border-slate-950 bg-[#151414]"`}
                 >
-                  <h1 className={styles.projectTitle}>Farm villas & Resorts</h1>
+                  <h1
+                    onClick={() => handleRouting("FarmVillasResorts")}
+                    className={styles.projectTitle}
+                  >
+                    Farm villas & Resorts
+                  </h1>
                   <h2 className={styles.projectSubTitle}>Narshipatnam</h2>
                   <h2 className={styles.projectSubTitle}>50 Acres</h2>
 
@@ -254,7 +285,12 @@ export default function Landing() {
                 <div
                   className={` ${styles.flexDivText} "grow p-8  bg-[#151414]"`}
                 >
-                  <h1 className={styles.projectTitle}>Agri Farming</h1>
+                  <h1
+                    onClick={() => handleRouting("AgriFarm")}
+                    className={styles.projectTitle}
+                  >
+                    Agri Farming
+                  </h1>
                   <h2 className={styles.projectSubTitle}>Orissa</h2>
                   <h2 className={styles.projectSubTitle}>2000 Acres</h2>
 
@@ -272,6 +308,7 @@ export default function Landing() {
                   <div className={styles.absoluteBlock}>
                     <div className={styles.viewProjectWrapper}>
                       <img
+                        onClick={() => handleRouting("AgriFarm")}
                         src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                         loading="lazy"
                         width="100"
@@ -305,6 +342,7 @@ export default function Landing() {
                 >
                   <div className={styles.viewProjectWrapperMobile}>
                     <img
+                      onClick={() => handleRouting("Greenvilla")}
                       src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                       loading="lazy"
                       width="100"
@@ -325,7 +363,12 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Green Villas</h1>
+                <h1
+                  onClick={() => handleRouting("Greenvilla")}
+                  className={`${styles.projectTitle} m-1  `}
+                >
+                  Green Villas
+                </h1>
                 <h2 className={styles.projectSubTitle}>
                   Sheela Nagar, Visakhapatnam
                 </h2>
@@ -354,6 +397,7 @@ export default function Landing() {
                 >
                   <div className={styles.viewProjectWrapperMobile}>
                     <img
+                      onClick={() => handleRouting("Apartments")}
                       src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                       loading="lazy"
                       width="100"
@@ -374,7 +418,12 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Apartments</h1>
+                <h1
+                  onClick={() => handleRouting("Apartments")}
+                  className={`${styles.projectTitle} m-1  `}
+                >
+                  Apartments
+                </h1>
                 <h2 className={styles.projectSubTitle}>
                   Sheela Nagar, Visakhapatnam
                 </h2>
@@ -403,6 +452,7 @@ export default function Landing() {
                 >
                   <div className={styles.viewProjectWrapperMobile}>
                     <img
+                      onClick={() => handleRouting("FarmHouse")}
                       src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                       loading="lazy"
                       width="100"
@@ -423,7 +473,12 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Farm House</h1>
+                <h1
+                  onClick={() => handleRouting("FarmHouse")}
+                  className={`${styles.projectTitle} m-1  `}
+                >
+                  Farm House
+                </h1>
                 <h2 className={styles.projectSubTitle}>
                   Kothavalasa, vizianagaram
                 </h2>
@@ -452,6 +507,7 @@ export default function Landing() {
                 >
                   <div className={styles.viewProjectWrapperMobile}>
                     <img
+                      onClick={() => handleRouting("FarmVillasResorts")}
                       src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                       loading="lazy"
                       width="100"
@@ -472,7 +528,10 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>
+                <h1
+                  onClick={() => handleRouting("FarmVillasResorts")}
+                  className={`${styles.projectTitle} m-1  `}
+                >
                   Farm villas & Resorts
                 </h1>
                 <h2 className={styles.projectSubTitle}>Narshipatnam</h2>
@@ -501,6 +560,7 @@ export default function Landing() {
                 >
                   <div className={styles.viewProjectWrapperMobile}>
                     <img
+                      onClick={() => handleRouting("AgriFarm")}
                       src="https://cdn.prod.website-files.com/65f2ce072886eff397ca7a3f/66461cc9859f07541be8c898_up-right-arrow.png"
                       loading="lazy"
                       width="100"
@@ -521,7 +581,12 @@ export default function Landing() {
               <div
                 className={`  " p-8 pt-0 border-y border-slate-950 bg-[#151414]  text-white"`}
               >
-                <h1 className={`${styles.projectTitle} m-1  `}>Agri Farming</h1>
+                <h1
+                  onClick={() => handleRouting("AgriFarm")}
+                  className={`${styles.projectTitle} m-1  `}
+                >
+                  Agri Farming
+                </h1>
                 <h2 className={styles.projectSubTitle}>Orissa</h2>
                 <h2 className={styles.projectSubTitle}>
                   20 Acres Gated comunity
