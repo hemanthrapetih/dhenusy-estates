@@ -55,7 +55,7 @@ export default function Landing() {
       <div className={styles.videoBgTint}></div>
       <video className={styles.videoBg} autoPlay muted loop>
         <source
-          src={`${import.meta.env.VITE_PUBLIC_URL}bgvideo.mp4`}
+          src={`${import.meta.env.BASE_URL}bgvideo.mp4`}
           type="video/mp4"
         />
         Your browser does not support the video tag.
