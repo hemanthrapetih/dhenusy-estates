@@ -723,20 +723,10 @@ export default function Landing() {
         <div className="flex justify-between gap-2 items-center">
           <div className="grow text-5xl w-full ">
             <span className="text-[#d4af37] font-bold">Customer Reviews </span>
-            {/* <p>Real Estate Agency</p> */}
           </div>
-          {/* <div className="grow-0 w-1/2">
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor.
-            </span>
-          </div> */}
         </div>
 
         <InfiniteMovingCardsDemo></InfiniteMovingCardsDemo>
-        {/* <div className="">
-        </div> */}
       </section>
 
       {/* ************************** */}
